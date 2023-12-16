@@ -1,5 +1,4 @@
 ﻿using ContactBook.Entities;
-using System.ComponentModel.DataAnnotations;
 
 namespace ContactBookApi.Tests._01_Entities
 {
