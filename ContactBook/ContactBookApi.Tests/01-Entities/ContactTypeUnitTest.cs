@@ -18,11 +18,7 @@ namespace ContactBookApi.Tests._01_Entities
             ContactType contactType = DumpEntity(id, description);
 
             //Act
-            var validationResults = new List<ValidationResult>();
-            var actual = Validator.TryValidateObject(contactType, 
-                new ValidationContext(contactType), 
-                validationResults, 
-                validateAllProperties: true);
+            bool actual = ValidateDataAnnotationsHelper.Validate(contactType);
 
             //Assert
             Assert.Equal(actual, expected);
