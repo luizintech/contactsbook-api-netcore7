@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ContactBook.EFCore.Persistence\ContactBook.EFCore.Persistence.csproj" />
     <ProjectReference Include="..\ContactBook.Entities\ContactBook.Entities.csproj" />
     <ProjectReference Include="..\ContactBookApi\ContactBookApi.csproj" />
   </ItemGroup>

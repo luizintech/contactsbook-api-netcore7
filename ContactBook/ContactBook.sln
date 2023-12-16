@@ -14,11 +14,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Unit Tests", "01-Unit Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBookApi.Tests", "ContactBookApi.Tests\ContactBookApi.Tests.csproj", "{B8132031-A9CD-4E4A-AD8F-C2073A19FF63}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Domain", "02-Domain", "{BF120EE2-2B7A-412E-9525-F672D69E3000}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Domain and EF Persistence", "02-Domain and EF Persistence", "{BF120EE2-2B7A-412E-9525-F672D69E3000}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBook.Entities", "ContactBook.Entities\ContactBook.Entities.csproj", "{53432B80-7146-4AF8-93EF-5F7F240A9C1A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Infra", "03-Infra", "{6074C6E3-3146-490D-8320-3F220CEE2C36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBook.EFCore.Persistence", "ContactBook.EFCore.Persistence\ContactBook.EFCore.Persistence.csproj", "{6503D564-8032-4012-BCB4-B9E9130DDA04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{53432B80-7146-4AF8-93EF-5F7F240A9C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53432B80-7146-4AF8-93EF-5F7F240A9C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53432B80-7146-4AF8-93EF-5F7F240A9C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6503D564-8032-4012-BCB4-B9E9130DDA04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6503D564-8032-4012-BCB4-B9E9130DDA04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6503D564-8032-4012-BCB4-B9E9130DDA04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6503D564-8032-4012-BCB4-B9E9130DDA04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B8132031-A9CD-4E4A-AD8F-C2073A19FF63} = {C3A8C74E-9986-413D-9613-23FD53989395}
 		{53432B80-7146-4AF8-93EF-5F7F240A9C1A} = {BF120EE2-2B7A-412E-9525-F672D69E3000}
+		{6503D564-8032-4012-BCB4-B9E9130DDA04} = {BF120EE2-2B7A-412E-9525-F672D69E3000}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B4EB244-4E38-44CA-8CED-0F5DB5B5B3E9}

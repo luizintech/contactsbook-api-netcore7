@@ -1,3 +1,5 @@
+using ContactBook.EFCore.Persistence.DataContexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContactBookApi
 {
@@ -8,6 +10,11 @@ namespace ContactBookApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddDbContext<ContactBookDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ContactBookMsSql"));
+            }); 
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
