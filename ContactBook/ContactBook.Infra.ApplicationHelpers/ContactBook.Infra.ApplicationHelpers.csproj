@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ContactBook.Dtos\ContactBook.Dtos.csproj" />
     <ProjectReference Include="..\ContactBook.Entities\ContactBook.Entities.csproj" />
   </ItemGroup>
 

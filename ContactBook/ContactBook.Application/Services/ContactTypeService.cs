@@ -1,6 +1,7 @@
 ﻿using ContactBook.Application.Interfaces;
 using ContactBook.Dtos.ContactTypes;
 using ContactBook.EFCore.Persistence.Interfaces;
+using ContactBook.Infra.ApplicationHelpers;
 
 namespace ContactBook.Application.Services
 {
@@ -16,12 +17,7 @@ namespace ContactBook.Application.Services
         public async Task<IEnumerable<ContactTypeDto>> FindAllAsync()
         {
             var contactTypes = await _contactTypeRepository.GetAllAsync();
-            return contactTypes.Select(c => new ContactTypeDto()
-            {
-                Id = c.Id,
-                Description = c.Description,
-                CreatedAt = c.CreatedAt
-            }).ToList();
+            return contactTypes.Select(c => c.ToDto()).ToList();
         }
     }
 }
