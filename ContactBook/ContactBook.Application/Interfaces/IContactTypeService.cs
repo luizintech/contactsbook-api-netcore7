@@ -1,4 +1,4 @@
-﻿using ContactBook.Entities.Dtos.ContactTypes;
+﻿using ContactBook.Dtos.ContactTypes;
 
 namespace ContactBook.Application.Interfaces
 {

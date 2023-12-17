@@ -1,6 +1,6 @@
 ﻿using ContactBook.Application.Interfaces;
+using ContactBook.Dtos.ContactTypes;
 using ContactBook.EFCore.Persistence.Interfaces;
-using ContactBook.Entities.Dtos.ContactTypes;
 
 namespace ContactBook.Application.Services
 {

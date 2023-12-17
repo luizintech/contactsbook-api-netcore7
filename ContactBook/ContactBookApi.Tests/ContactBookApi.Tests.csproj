@@ -28,6 +28,7 @@
     <ProjectReference Include="..\ContactBook.Application\ContactBook.Application.csproj" />
     <ProjectReference Include="..\ContactBook.EFCore.Persistence\ContactBook.EFCore.Persistence.csproj" />
     <ProjectReference Include="..\ContactBook.Entities\ContactBook.Entities.csproj" />
+    <ProjectReference Include="..\ContactBook.Infra.ApplicationHelpers\ContactBook.Infra.ApplicationHelpers.csproj" />
     <ProjectReference Include="..\ContactBookApi\ContactBookApi.csproj" />
   </ItemGroup>
 

@@ -21,8 +21,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ContactBook.Application\ContactBook.Application.csproj" />
+    <ProjectReference Include="..\ContactBook.Dtos\ContactBook.Dtos.csproj" />
     <ProjectReference Include="..\ContactBook.EFCore.Persistence\ContactBook.EFCore.Persistence.csproj" />
-    <ProjectReference Include="..\ContactBook.Entities\ContactBook.Entities.csproj" />
   </ItemGroup>
 
 </Project>

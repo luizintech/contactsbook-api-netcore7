@@ -1,4 +1,4 @@
-﻿namespace ContactBook.Entities.Dtos.ContactTypes
+﻿namespace ContactBook.Dtos.ContactTypes
 {
     public class ContactTypeDto
     {
