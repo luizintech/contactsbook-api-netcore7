@@ -5,21 +5,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ContactBook.EFCore.Persistence.Repositories
 {
-    public class ContactRepository
-        : IContactRepository
+    public class ContactTypeValueReporitory
+        : IContactTypeValueReporitory
     {
         private readonly ContactBookDbContext _dbContext;
-        public ContactRepository(ContactBookDbContext dbContext)
+        public ContactTypeValueReporitory(ContactBookDbContext dbContext)
         {
             _dbContext = dbContext;
         }
-
-        public async Task<int> AddAsync(Contact contact)
+        public async Task<int> AddAsync(ContactTypeValue contactTypeValue)
         {
             var insertedId = 0;
-            await _dbContext.Contacts.AddAsync(contact);
+            await _dbContext.ContactTypeValues.AddAsync(contactTypeValue);
             await _dbContext.SaveChangesAsync();
-            insertedId = contact.Id;
+            insertedId = contactTypeValue.Id;
             return insertedId;
         }
 
@@ -30,7 +29,7 @@ namespace ContactBook.EFCore.Persistence.Repositories
             var entity = await this.GetByIdAsync(id);
             if (entity != null)
             {
-                _dbContext.Contacts.Remove(entity);
+                _dbContext.ContactTypeValues.Remove(entity);
                 _dbContext.SaveChanges();
                 deleted = true;
             }
@@ -38,22 +37,22 @@ namespace ContactBook.EFCore.Persistence.Repositories
             return deleted;
         }
 
-        public async Task<IEnumerable<Contact>> GetAllAsync()
+        public async Task<IEnumerable<ContactTypeValue>> GetAllAsync()
         {
-            return await _dbContext.Contacts
+            return await _dbContext.ContactTypeValues
                 .ToArrayAsync();
         }
 
-        public async Task<Contact> GetByIdAsync(int id)
+        public async Task<ContactTypeValue> GetByIdAsync(int id)
         {
-            return await _dbContext.Contacts
+            return await _dbContext.ContactTypeValues
                 .Where(c => c.Id == id)
                 .SingleOrDefaultAsync() ?? null!;
         }
 
-        public async Task UpdateAsync(Contact contact)
+        public async Task UpdateAsync(ContactTypeValue contactTypeValue)
         {
-            this._dbContext.Set<Contact>().UpdateRange(contact);
+            this._dbContext.Set<ContactTypeValue>().UpdateRange(contactTypeValue);
             await this._dbContext.SaveChangesAsync();
         }
     }

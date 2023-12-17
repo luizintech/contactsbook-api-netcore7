@@ -1,4 +1,6 @@
 using ContactBook.EFCore.Persistence.DataContexts;
+using ContactBook.EFCore.Persistence.Interfaces;
+using ContactBook.EFCore.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace ContactBookApi
@@ -10,6 +12,9 @@ namespace ContactBookApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddScoped<IContactTypeRepository, ContactTypeRepository>();
+            builder.Services.AddScoped<IContactRepository, ContactRepository>();
+            builder.Services.AddScoped<IContactTypeValueReporitory, ContactTypeValueReporitory>();
 
             builder.Services.AddDbContext<ContactBookDbContext>(options =>
             {
