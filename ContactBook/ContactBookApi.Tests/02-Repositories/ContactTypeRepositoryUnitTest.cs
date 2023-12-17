@@ -1,9 +1,7 @@
 ﻿using ContactBook.EFCore.Persistence.DataContexts;
-using ContactBook.EFCore.Persistence.Interfaces;
 using ContactBook.EFCore.Persistence.Repositories;
 using ContactBook.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 namespace ContactBookApi.Tests._02_Repositories
 {
