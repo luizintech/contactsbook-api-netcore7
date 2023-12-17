@@ -4,6 +4,7 @@ using ContactBook.EFCore.Persistence.DataContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContactBook.EFCore.Persistence.Migrations
 {
     [DbContext(typeof(ContactBookDbContext))]
-    partial class ContactBookDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231217122800_DumpContactTypes")]
+    partial class DumpContactTypes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

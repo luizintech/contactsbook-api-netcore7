@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContactBook.EFCore.Persistence\ContactBook.EFCore.Persistence.csproj" />
+    <ProjectReference Include="..\ContactBook.Entities\ContactBook.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
