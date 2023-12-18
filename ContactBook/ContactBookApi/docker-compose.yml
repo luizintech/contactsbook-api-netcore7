@@ -1,0 +1,8 @@
+﻿version: '3.4'
+
+services:
+  contactbooksapi:
+    container_name: contactbooksapi
+    image: contactbookapi:1.0.0
+    ports:
+        - "9001:80"
