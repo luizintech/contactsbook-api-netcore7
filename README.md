@@ -20,6 +20,7 @@ Running the command on Visual Studio console window (PowerShell):
 This command will create the image and you can run you instance:
 ![image](https://github.com/fernandosgodoy/contactsbook-api-netcore7/assets/1747058/30d44572-072f-4413-aae3-9f580467fea4)
 
+Instead of create an image, you can run the Docker Compose command and use the attached file docker-compose.yml inside the ContactBookApi project
 
 ## Unit tests
 All the development was done using the TDD approach and this is the manner that I really believe who is good to detect problems, refactory code and maintain the App. All the tests were developed using th XUnit library, and you'll see in the project like this:
