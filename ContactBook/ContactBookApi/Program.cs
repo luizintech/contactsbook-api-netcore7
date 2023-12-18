@@ -19,6 +19,7 @@ namespace ContactBookApi
             builder.Services.AddScoped<IContactTypeValueReporitory, ContactTypeValueReporitory>();
 
             builder.Services.AddScoped<IContactTypeService, ContactTypeService>();
+            builder.Services.AddScoped<IContactService, ContactService>();
 
             builder.Services.AddDbContext<ContactBookDbContext>(options =>
             {

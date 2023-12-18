@@ -15,9 +15,6 @@ namespace ContactBook.Application.Services
         }
 
         public async Task<IEnumerable<ContactTypeDto>> FindAllAsync()
-        {
-            var contactTypes = await _contactTypeRepository.GetAllAsync();
-            return contactTypes.Select(c => c.ToDto()).ToList();
-        }
+            => (await _contactTypeRepository.GetAllAsync()).Select(c => c.ToDto()).ToList();
     }
 }

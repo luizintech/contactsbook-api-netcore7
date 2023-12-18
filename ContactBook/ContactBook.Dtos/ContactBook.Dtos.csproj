@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ContactBook.Entities\ContactBook.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -15,7 +15,7 @@ namespace ContactBook.EFCore.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<ContactType>> GetAllAsync()
+        public virtual async Task<IEnumerable<ContactType>> GetAllAsync()
         {
             return await _dbContext.ContactTypes
                 .ToArrayAsync();

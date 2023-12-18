@@ -14,7 +14,7 @@ namespace ContactBook.EFCore.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<int> AddAsync(Contact contact)
+        public virtual async Task<int> AddAsync(Contact contact)
         {
             var insertedId = 0;
             await _dbContext.Contacts.AddAsync(contact);
@@ -23,7 +23,7 @@ namespace ContactBook.EFCore.Persistence.Repositories
             return insertedId;
         }
 
-        public async Task<bool> DeleteAsync(int id)
+        public virtual async Task<bool> DeleteAsync(int id)
         {
             var deleted = false;
 
@@ -38,20 +38,20 @@ namespace ContactBook.EFCore.Persistence.Repositories
             return deleted;
         }
 
-        public async Task<IEnumerable<Contact>> GetAllAsync()
+        public virtual async Task<IEnumerable<Contact>> GetAllAsync()
         {
             return await _dbContext.Contacts
                 .ToArrayAsync();
         }
 
-        public async Task<Contact> GetByIdAsync(int id)
+        public virtual async Task<Contact> GetByIdAsync(int id)
         {
             return await _dbContext.Contacts
                 .Where(c => c.Id == id)
                 .SingleOrDefaultAsync() ?? null!;
         }
 
-        public async Task UpdateAsync(Contact contact)
+        public virtual async Task UpdateAsync(Contact contact)
         {
             this._dbContext.Set<Contact>().UpdateRange(contact);
             await this._dbContext.SaveChangesAsync();
