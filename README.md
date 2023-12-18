@@ -14,6 +14,8 @@ To run the Docker image, open the PowerShell (or another command line app) and r
 dotnet publish --os linux --arch x64 -p:PublishProfile=DefaultContainer -c Release
 `
 
-## Unit tests and smoking tests scenarios
+## Unit tests
+All the development was done using the TDD approach and this is the manner that I really believe who is good to detect problems, refactory code and maintain the App. All the tests were developed using th XUnit library, and you'll see in the project like this:
+![image](https://github.com/fernandosgodoy/contactsbook-api-netcore7/assets/1747058/af734a56-680c-45fb-af74-10be01308ad8)
 
 
